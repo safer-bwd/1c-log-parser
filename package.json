@@ -1,0 +1,41 @@
+{
+  "name": "1c-log-parser",
+  "version": "0.1.0",
+  "description": "Parser for 1C:Enterprise 8.3 event log (lgf,lgp)",
+  "main": "dist/index.js",
+  "repository": "https://github.com/safer-bwd/1c-log-parser.git",
+  "author": "Anton Safronov <safer.anton@gmail.com>",
+  "license": "ISC",
+  "bin": {
+    "1с-log-parse": "./bin/1с-log-parser.js",
+    "1с-log-parser": "./bin/1с-log-parser.js"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "jest --colors",
+    "build": "cross-env NODE_ENV=production babel src --out-dir dist",
+    "prepublishOnly": "npm run build"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "verbose": true
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.1",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.5.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.15.3",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jest": "^22.4.1",
+    "jest": "^24.5.0"
+  },
+  "dependencies": {
+    "commander": "^2.19.0",
+    "lodash": "^4.17.11"
+  }
+}
